@@ -6,7 +6,7 @@
 /*   By: mpaul <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 14:40:13 by mpaul             #+#    #+#             */
-/*   Updated: 2016/09/21 17:40:18 by mpaul            ###   ########.fr       */
+/*   Updated: 2016/09/21 17:59:06 by mpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,13 @@ int		main(int argc, char **argv)
 			j = 0;
 			e = 0;
 			f = 0;
-			while (argv[2][j] != '\0')
-			{
+			while (argv[2][j++] != '\0')
 				if (argv[2][j] == argv[1][i])
 					f = 1;
-				j++;
-			}
 			j = 0;
 			while (j < i)
-			{
-				if (argv[1][i] == argv[1][j])
+				if (argv[1][i] == argv[1][j++])
 					e = 1;
-				j++;
-			}
 			if (e == 0 && f == 1)
 				ft_putchar(argv[1][i]);
 			i++;
